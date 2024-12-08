@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: second-app-deploy
+  
+spec:
+  replicas: 1
+  selector:
+    marchLabels:
+      app: second-app
+      tier: backend
+  
+  template:
+    metadata:
+      labels:
+        app: second-app
+        tier: backend
+    spec:
+    - name: second-app
+      image: rafaelfabri/second-app-kub
+  
