@@ -21,8 +21,8 @@ Podemos criar dois arquivos, um para cada objetivo que desejamos, por exemplo de
 Vamos criar o arquivo deployment.yaml
 
 ```bash
-apiVersion: apps/v1 -- (Versão kubernets)
-kind: *** Qual Object desejamos chamar (Deployment, Service, Jobs, Pods)
+apiVersion: apps/v1 
+kind: Deployment  
 metadata:
   name: name_of_deployment
 
